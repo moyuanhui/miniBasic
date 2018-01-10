@@ -1,13 +1,16 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+    <view class="question display-flex">
+        <navigator>
+            <input type="text" placeholder="搜索话题，问题或人"></input>
+        </navigator>
+        <view>
+           <view class="question-icon">
+                <text></text>
+            </view>
+            <view class="queston-title">
+                提问
+            </view>
+        </view>
+    </view>
 </view>
