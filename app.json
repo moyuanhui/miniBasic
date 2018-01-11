@@ -5,9 +5,49 @@
     ],
     "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#0068c4",
+    "navigationBarTitleText": "恒康信息科技",
+    "navigationBarTextStyle":"#fff"
+    },
+    "tabBar":{
+        "color":"#181818",
+        "selectedColor": "#0068c4",
+        "backgroundColor": "#fff",
+        "borderStyle": "#ddd",
+        "position":"bottom",
+        "list":[
+            {
+                "pagePath":"src/index",
+                "text":"首页",
+                "iconPath":"image/tab/index.png",
+                "selectedIconPath":"image/tab/index_focus.png"
+            },
+            {
+                "pagePath":"src/index",
+                "text":"想法",
+                "iconPath": "image/tab/ring.png",
+                "selectedIconPath": "image/tab/ring_focus.png"
+            },
+            {
+                "pagePath":"src/index",
+                "text":"市场",
+                "iconPath": "image/tab/discovery.png",
+                "selectedIconPath": "image/tab/discovery_focus.png"
+            },
+            {
+                "pagePath": "src/index",
+                "text": "消息",
+                "iconPath": "image/tab/chat.png",
+                "selectedIconPath": "image/tab/chat_focus.png"
+            },
+            {
+                "pagePath": "src/index",
+                "text": "更多",
+                "iconPath": "image/tab/burger.png",
+                "selectedIconPath": "image/tab/burger_focus.png"
+            }
+
+        ]
     },
     "networkTimeout": {
         "request": 10000,
