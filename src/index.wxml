@@ -8,9 +8,9 @@
            <view class="question-icon">
                 <text></text>
             </view>
-            <view class="queston-title">
+            <!-- <view class="queston-title">
                 提问
-            </view>
+            </view> -->
         </view>
     </view>
 </view>
