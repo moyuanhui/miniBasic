@@ -6,7 +6,7 @@
         </navigator>
         <view>
            <view class="question-icon">
-                <text></text>
+                <text>     </text>
             </view>
             <!-- <view class="queston-title">
                 提问
