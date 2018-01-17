@@ -9,7 +9,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.7.2",
-	"appid": "wxa1e08beb837975fc",
+	"appid": "wxa1e08beb837975fc", 
 	"projectname": "zhihu",
 	"condition": {
 		"search": {
