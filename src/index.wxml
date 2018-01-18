@@ -2,7 +2,7 @@
 <view class="container">
     <view class="question display-flex">
         <navigator>
-            <input type="text" placeholder="搜索话题，问题或人"></input>
+            <input type="text" placeholder=""></input>
         </navigator>
         <view>
            <view class="question-icon">
