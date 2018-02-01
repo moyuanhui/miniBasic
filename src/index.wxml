@@ -1,16 +1,44 @@
-<!--index.wxml-->
-<view class="container">
-    <view class="question display-flex">
-        <navigator>
-            <input type="text" placeholder=""></input>
-        </navigator>
-        <view>
-           <view class="question-icon">
-                <text>     </text>
-            </view>
-            <!-- <view class="queston-title">
-                提问
-            </view> -->
+<view class="page">
+    <!-- swiper start -->
+    <view>
+        <swiper indicator-dots="true" autoplay="true" indicator-color="rgba(0,0,0,0.5)" indicator-active-color="#ffffff" current="0" interval="3000" duration="600" circular="true" class="swiper-box" >
+            <block>
+                <swiper-item>
+                    <image src="/image/index/timg.jpg" class="swiper-img" mode="aspectFill"/>
+                </swiper-item>
+                <swiper-item>
+                    <image src="/image/index/timg.jpg" class="swiper-img" mode="aspectFill"/>
+                </swiper-item>
+                <swiper-item>
+                    <image src="/image/index/timg.jpg" class="swiper-img" mode="aspectFill"/>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!-- swiper end -->
+    <!-- 头像位置 start -->
+    <view class="tc mt15">
+        <view class="header-img ">
+            <image src="/image/index/0.jpg" class='images'/>
+        </view>
+        <view class="f20 mt10">
+            <text>吴亦凡</text>
+        </view>
+        <view class="f20 mt10 fw6">
+            <text>SVIP</text>
         </view>
     </view>
+     <!-- 头像位置 end -->
+     <!-- 底部导航 start -->
+    <view class="page__bd mt15">
+        <view class="weui-grids">
+            <block wx:for="{{4}}">
+                <navigator url="" class="weui-grid width-50 padding-20-10" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="/image/index/0.jpg" />
+                    <view class="weui-grid__label mt15">优惠券</view>
+                </navigator>
+            </block>
+        </view>
+    </view>
+     <!-- 底部导航 end -->
 </view>

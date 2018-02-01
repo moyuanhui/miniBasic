@@ -27,13 +27,30 @@ Promise.prototype.finally = (callback) => {
 let wxLogin = () => {
     return wxPromisify(wx.login)
 }
+//获取授权信息
+let wxSetting = () => {
+    return wxPromisify(wx.getSetting)
+}
+
 /**
  * 获取微信用户信息
  * 注意:须在登录之后调用
  */
-let wxGetUserInfo = () => {
-    return wxPromisify(wx.getUserInfo)
+let wxGetUserInfo = (withCredentials) => {
+    var wxGetUserInfo = wxPromisify(wx.getUserInfo)
+    return wxGetUserInfo({
+        withCredentials: withCredentials
+    })
 }
+
+let wxAuthorize = (scope)=>{
+    var wxAuthorize = wxPromisify(wx.authorize)
+    return wxAuthorize({
+        scope:scope
+    })
+}
+
+
 /**
  * 获取系统信息
  */
@@ -59,6 +76,8 @@ let wxNavigateTo = (url, params) => {
 module.exports = {
     wxPromisify,
     wxLogin,
+    wxSetting,
+    wxAuthorize,
     wxGetUserInfo,
     wxGetSystemInfo,
     wxNavigateTo

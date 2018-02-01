@@ -5,7 +5,7 @@ const app = getApp()
 
 Page({
   data: {
-    motto: '恒康信息科技小程序',
+    motto: '天下看球小程序',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -25,7 +25,7 @@ Page({
       })
     } else if (this.data.canIUse){
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 此处加入 callback 以防止这种情况
+      // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
         this.setData({
           userInfo: res.userInfo,
@@ -52,5 +52,35 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  login:function(e){
+    wx.login({
+      success:function(res){
+        console.log(res);
+      },
+      fail:function(err){
+        console.log(err);
+      }
+    })
+  },
+  getuserinfo:function(){
+    wx.authorize({
+      scope: 'scope.userInfo',
+      success:function() {
+        // 用户已经同意小程序使用录音功能，后续调用 wx.startRecord 接口不会弹窗询问
+        wx.startRecord()
+        wx.getUserInfo({
+          success: function (res) {
+            console.log(res);
+          },
+          fail: function (error) {
+            console.log(error)
+          }
+        })
+      },fail:function(error){
+        console.log('12',error)
+      }
+    })
+
   }
 })

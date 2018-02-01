@@ -1,22 +1,26 @@
 {
 	"description": "项目配置文件。",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.7.2",
-	"appid": "wxa1e08beb837975fc", 
-	"projectname": "zhihu",
+	"libVersion": "1.9.1",
+	"appid": "wxa1e08beb837975fc",
+	"projectname": "HKIT_Test",
 	"condition": {
 		"search": {
 			"current": -1,
 			"list": []
 		},
 		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
 			"current": -1,
 			"list": []
 		},

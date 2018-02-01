@@ -1,3 +1,7 @@
+import wxUtil from 'utils/wxUtil.js'
+import httpRequest from 'utils/httpUtil.js'
+import { getSessionKey } from 'utils/apiUtil.js'
+
 //app.js
 App({
   onLaunch: function () {
@@ -7,31 +11,30 @@ App({
     wx.setStorageSync('logs', logs)
 
     // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
+    
+    var wxLogin = wxUtil.wxLogin()
+    wxLogin().then(res => {
+        console.log(res.code);
+        let url = getSessionKey+'/'+res.code;
+        return httpRequest.getRequest(url);    
+    }).then(res=>{
+        console.log('成功了',res.data);
+        var wxSetting = wxUtil.wxSetting();
+        return wxSetting()
+    }).then(res=>{
+        // if (res.authSetting['scope.userInfo']) {          
+        //     wxUtil.wxGetUserInfo(true).then(res=>{
+        //          this.globalData.userInfo = res.userInfo
+        //      })
+        // }else{
+        //     wx.wxAuthorize('scope.userInfo').then(res=>{
+        //         wxUtil.wxGetUserInfo(true).then(res => {
+        //             this.globalData.userInfo = res.userInfo
+        //         })
+        //     })
+        // }
     })
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-            }
-          })
-        }
-      }
-    })
+    
   },
   globalData: {
     userInfo: null

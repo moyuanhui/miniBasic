@@ -1,4 +1,4 @@
-import Promise from "../plugin/promise.js"
+import Promise from "../plugin/promise"
 
 let wxPromisify = fn => {
     return function (obj = {}) {
@@ -36,7 +36,7 @@ let getRequest = (url, data) => {
         data: data,
         header: {
             'Content-Type': 'application/json;charset=UTF-8',
-
+            'Cookies':"API-ANTH-SESSION=12323"
         }
     })
 }
@@ -54,7 +54,7 @@ let postRequest = (url, data) => {
         data: data,
         header: {
             "content-type": "application/x-www-form-urlencoded"
-        },
+        }
     })
 }
 
