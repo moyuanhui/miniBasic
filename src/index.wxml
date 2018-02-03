@@ -32,7 +32,25 @@
      <!-- 底部导航 start -->
     <view class="page__bd mt15">
         <view class="weui-grids">
-            <block wx:for="{{4}}">
+            <block>
+                <navigator url="" class="weui-grid width-50 padding-20-10" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="/image/index/0.jpg" />
+                    <view class="weui-grid__label mt15">优惠券</view>
+                </navigator>
+            </block>
+             <block>
+                <navigator url="" class="weui-grid width-50 padding-20-10" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="/image/index/0.jpg" />
+                    <view class="weui-grid__label mt15">优惠券</view>
+                </navigator>
+            </block>
+             <block>
+                <navigator url="" class="weui-grid width-50 padding-20-10" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="/image/index/0.jpg" />
+                    <view class="weui-grid__label mt15">优惠券</view>
+                </navigator>
+            </block>
+             <block>
                 <navigator url="" class="weui-grid width-50 padding-20-10" hover-class="weui-grid_active">
                     <image class="weui-grid__icon" src="/image/index/0.jpg" />
                     <view class="weui-grid__label mt15">优惠券</view>

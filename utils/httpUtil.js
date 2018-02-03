@@ -35,8 +35,8 @@ let getRequest = (url, data) => {
         method: 'GET',
         data: data,
         header: {
-            'Content-Type': 'application/json;charset=UTF-8',
-            'Cookies':"API-ANTH-SESSION=12323"
+            'content-type': 'application/x-www-form-urlencoded',
+            'cookie': "API-ANTH-SESSION=" + wx.getStorageSync("sessionid")
         }
     })
 }
@@ -53,7 +53,7 @@ let postRequest = (url, data) => {
         method: 'POST',
         data: data,
         header: {
-            "content-type": "application/x-www-form-urlencoded"
+            "Cookie":""
         }
     })
 }
