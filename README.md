@@ -1,5 +1,8 @@
-#hkbase
-#测试账号信息
-AppID(小程序ID): wxa1e08beb837975fc
+小程序开发框架模板
+### 支持WEUI前端框架
 
-AppSecret(小程序密钥)：4bf0ee4c783d9f18e484928d507f1441
+### 支持ES6的语法和promise
+
+### 对Http请求进行封装
+
+### 封装WxUtil请求
