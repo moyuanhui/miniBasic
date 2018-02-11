@@ -1,5 +1,4 @@
-// let host = "weixin.hengkangit.com"
-let host = "localhost:15572"
+let host = "localhost:288"
 let config = {
     host,
     // 登录地址，用于建立会话
