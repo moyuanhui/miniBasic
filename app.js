@@ -32,17 +32,6 @@ App({
     },error=>{
         console.log(error);
     }).then(res=>{
-        // if (res.authSetting['scope.userInfo']) {          
-        //     wxUtil.wxGetUserInfo(true).then(res=>{
-        //          this.globalData.userInfo = res.userInfo
-        //      })
-        // }else{
-        //     wx.wxAuthorize('scope.userInfo').then(res=>{
-        //         wxUtil.wxGetUserInfo(true).then(res => {
-        //             this.globalData.userInfo = res.userInfo
-        //         })
-        //     })
-        // }
     })
     
   },
@@ -50,8 +39,8 @@ App({
     userInfo: null,
     //小程序上下文信息
     authContext:{
-        companyId:'5003',
-        accountId:'5000300001'
+        companyId:'sa',
+        accountId:'sa'
     }
   }
 })
